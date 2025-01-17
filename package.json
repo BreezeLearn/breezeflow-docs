@@ -1,0 +1,11 @@
+{
+  "name": "breezeflow-docs",
+  "version": "1.0.0",
+  "description": "BreezeFlow Documentation",
+  "scripts": {
+    "dev": "mintlify dev"
+  },
+  "dependencies": {
+    "mintlify": "^4.0.322"
+  }
+}

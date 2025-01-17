@@ -2,14 +2,14 @@
   "$schema": "https://mintlify.com/schema.json",
   "name": "Breezeflow",
   "logo": {
-    "dark": "/logo/dark.svg",
-    "light": "/logo/light.svg"
+    "dark": "/logo/primarylogo1.svg",
+    "light": "/logo/primarylogo1.svg"
   },
   "favicon": "/favicon.svg",
   "colors": {
-    "primary": "#0D9373",
-    "light": "#07C983",
-    "dark": "#0D9373",
+    "primary": "#101828",
+    "light": "#0048FF",
+    "dark": "#0048FF",
     "anchors": {
       "from": "#0D9373",
       "to": "#07C983"
@@ -18,12 +18,12 @@
   "topbarLinks": [
     {
       "name": "Support",
-      "url": "mailto:hi@mintlify.com"
+      "url": "mailto:info@breezeflow.io"
     }
   ],
   "topbarCtaButton": {
     "name": "Dashboard",
-    "url": "https://dashboard.mintlify.com"
+    "url": "https://breezeflow.io"
   },
   "tabs": [
     {
@@ -33,9 +33,9 @@
   ],
   "anchors": [
     {
-      "name": "Documentation",
+      "name": "BreezeFlow",
       "icon": "book-open-cover",
-      "url": "https://mintlify.com/docs"
+      "url": "https://breezeflow.io"
     }
   ],
   "navigation": [
@@ -72,10 +72,6 @@
         "api-reference/endpoint/delete"
       ]
     }
-  ],
-  "footerSocials": {
-    "x": "https://x.com/mintlify",
-    "github": "https://github.com/mintlify",
-    "linkedin": "https://www.linkedin.com/company/mintsearch"
-  }
+  ]
+ 
 }
