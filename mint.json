@@ -31,7 +31,7 @@
       "url": "api-reference"
     }
   ],
-  
+
   "anchors": [
     {
       "name": "BreezeFlow",
@@ -42,11 +42,7 @@
   "navigation": [
     {
       "group": "Guide",
-      "pages": [
-        "introduction",
-        "email"
-      ]
+      "pages": ["introduction", "email", "whatsapp"]
     }
   ]
- 
 }
