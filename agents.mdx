@@ -3,14 +3,22 @@ title: Agent Setup
 description: 'Learn how to connect Breezeflow chatbot to your website'
 ---
 
-## Setting up
+## Overview
 
+Breezeflow's AI chatbot enhances your website's customer support capabilities by providing instant, intelligent responses to visitor inquiries. This guide will walk you through the process of integrating the Breezeflow chatbot into your website.
 
-## Connect to Breezeflow Chatbot to your website via SDK
+## Prerequisites
 
-To connect the Breezeflow chatbot to your website, you would need to add the Breezeflow SDK to your website using any of the following method.
+Before you begin, ensure you have:
+- A Breezeflow account with chatbot access
+- Your unique chatbot ID (available in your Breezeflow dashboard)
+- Access to your website's codebase
 
-## 1. using NPM.
+## Integration Methods
+
+You can integrate the Breezeflow chatbot using either NPM packages or a CDN link. Choose the method that best suits your development environment.
+
+## 1. Using NPM
 ```
 npm install breezeflow-sdk
   or
@@ -58,52 +66,52 @@ const MyComponent = () => {
 };
 ```
 
-## 2. using CDN
+## 2. Using CDN
 
-Add the CDN link `https://cdn.jsdelivr.net/npm/breezeflow-sdk@latest/chat.js` to the `head` tag your HTML file.
+Add the CDN link `https://cdn.jsdelivr.net/npm/breezeflow-sdk@latest/chat.js` to the `head` tag of your HTML file.
 
 ### Usage
 
 ```HTML
-      <!DOCTYPE html>
-      <html lang="en">
-      <head>
-          <meta charset="UTF-8">
-          <meta name="viewport" content="width=device-width, initial-scale=1.0">
-          <script async type="text/javascript" src="https://cdn.jsdelivr.net/npm/breezeflow-sdk@latest/chat.js"></script>
-
-          <title>Basic HTML Snippet</title>
-      </head>
-      <body>
-          <bf-chat 
-          chatbotID="YOUR-CHATBOT-ID"
-          theme="dark"
-          orientation="right"
-          color="#0d3033"
-          logoURL="https://mintlify.s3-us-west-1.amazonaws.com/breezeflow/images/hero-dark.svg"
-          headline="Chat with our AI"
-          description="Ask me anything, and I'll do my best to answer!"
-          initialMessage="Hello 👋 How can I help you today?"
-          placeholder="Type your message here..."
-          newChatButtonText="Start a new chat">
-      </bf-chat>
-      </body>
-      </html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script async type="text/javascript" src="https://cdn.jsdelivr.net/npm/breezeflow-sdk@latest/chat.js"></script>
+    <title>Basic HTML Snippet</title>
+</head>
+<body>
+    <bf-chat 
+    chatbotID="YOUR-CHATBOT-ID"
+    theme="dark"
+    orientation="right"
+    color="#0d3033"
+    logoURL="https://mintlify.s3-us-west-1.amazonaws.com/breezeflow/images/hero-dark.svg"
+    headline="Chat with our AI"
+    description="Ask me anything, and I'll do my best to answer!"
+    initialMessage="Hello 👋 How can I help you today?"
+    placeholder="Type your message here..."
+    newChatButtonText="Start a new chat">
+</bf-chat>
+</body>
+</html>
 ```
-Login to your [Breezeflow](https://www.breezeflow.io) account to get your chatbot ID.
 
-## Configuration
+To get started, log in to your [Breezeflow](https://www.breezeflow.io) account and obtain your chatbot ID from the dashboard.
 
-### Agent props
+## Configuration Options
+
+### Agent Props
 
 | Prop                     | Type               | Description                                   |
 |--------------------------|--------------------|-----------------------------------------------|
-| orientation              | "left" \| "right" | Chat window position                          |
+| orientation              | "left" \| "right"  | Chat window position                          |
 | color                    | string            | Primary color for the chat interface          |
 | logoURL                  | string            | URL for the agent's avatar image              |
 | headline                 | string            | Chat window title                             |
-| description              | string            | Subtitle text below the headline             |
-| initialMessage           | string            | First message from the AI                    |
+| description              | string            | Subtitle text below the headline              |
+| initialMessage           | string            | First message from the AI                     |
 | initialMessagePopupDelay | string            | Delay before showing initial message          |
 | placeholder              | string            | Input field placeholder text                  |
 | newChatButtonText        | string            | Text for the new chat button                  |
@@ -111,13 +119,20 @@ Login to your [Breezeflow](https://www.breezeflow.io) account to get your chatbo
 
 ### Style Props
 
-| Prop        | Type                     | Description                  |
+| Prop         | Type                     | Description                  |
 |-------------|--------------------------|------------------------------|
-| theme       | `"light"` \| `"dark"`    | UI theme                     |
+| theme       | `"light"` \| `"dark"`    | UI theme                    |
 | colors      | `object`                 | Custom color configuration   |
 | container   | `object`                 | Container size and position  |
 | borderRadius| `object`                 | Border radius for UI elements|
 | button      | `object`                 | Chat button configuration    |
 
-Ensure to replace `your-agent-id` with your agent ID from your Breezeflow account. 
-Enjoy the seamless integration of Breezeflow chatbot to your website.
+## Testing Your Integration
+
+After implementation:
+1. Visit your website to ensure the chat widget appears
+2. Test the chat functionality with sample questions
+3. Verify that the styling matches your website's theme
+4. Check both desktop and mobile responsiveness
+
+Remember to replace `your-agent-id` with your actual agent ID from your Breezeflow account. For additional support or troubleshooting, visit your Breezeflow dashboard or contact our support team.
