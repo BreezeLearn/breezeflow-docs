@@ -41,8 +41,12 @@
   ],
   "navigation": [
     {
-      "group": "Guide",
-      "pages": ["introduction", "email", "whatsapp", "agents"]
+      "group": "Welcome to Breezeflow",
+      "pages": ["introduction"]
+    },
+    {
+      "group": "Feature Documentation",
+      "pages": ["email", "whatsapp", "agents"]
     }
   ]
 }
