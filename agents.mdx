@@ -1,0 +1,123 @@
+---
+title: Agent Setup
+description: 'Learn how to connect Breezeflow chatbot to your website'
+---
+
+## Setting up
+
+
+## Connect to Breezeflow Chatbot to your website via SDK
+
+To connect the Breezeflow chatbot to your website, you would need to add the Breezeflow SDK to your website using any of the following method.
+
+## 1. using NPM.
+```
+npm install breezeflow-sdk
+  or
+yarn add breezeflow-sdk
+  or
+pnpm add breezeflow-sdk
+```
+
+### Usage
+
+``` javascript
+import { BreezeflowChat } from 'breezeflow-sdk';
+import 'breezeflow-sdk/style.css';
+
+const MyComponent = () => {
+  const agent = {
+    orientation: "right",
+    color: "#0d3033",
+    logoURL: "path/to/your/logo.svg",
+    headline: "Chat with our AI",
+    description: "Ask me anything, and I'll do my best to answer!",
+    initialMessage: "Hello 👋 How can I help you today?",
+    placeholder: "Type your message here...",
+    newChatButtonText: "Start a new chat"
+  };
+
+  return (
+    <BreezeflowChat 
+      agent={agent}
+      agentId="your-agent-id"
+      styles={{
+        theme: 'light', // or 'dark'
+        colors: {
+          primary: '#0051FF',
+          darkBg: '#1a1d21',
+          lightBg: '#ffffff',
+          messageBgDark: '#1e2227',
+          messageBgLight: '#f7f7f7',
+          inputBgDark: '#2a2e33',
+          inputBgLight: '#f2f2f2'
+        }
+      }}
+    />
+  );
+};
+```
+
+## 2. using CDN
+
+Add the CDN link `https://cdn.jsdelivr.net/npm/breezeflow-sdk@latest/chat.js` to the `head` tag your HTML file.
+
+### Usage
+
+```HTML
+      <!DOCTYPE html>
+      <html lang="en">
+      <head>
+          <meta charset="UTF-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <script async type="text/javascript" src="https://cdn.jsdelivr.net/npm/breezeflow-sdk@latest/chat.js"></script>
+
+          <title>Basic HTML Snippet</title>
+      </head>
+      <body>
+          <bf-chat 
+          chatbotID="YOUR-CHATBOT-ID"
+          theme="dark"
+          orientation="right"
+          color="#0d3033"
+          logoURL="https://mintlify.s3-us-west-1.amazonaws.com/breezeflow/images/hero-dark.svg"
+          headline="Chat with our AI"
+          description="Ask me anything, and I'll do my best to answer!"
+          initialMessage="Hello 👋 How can I help you today?"
+          placeholder="Type your message here..."
+          newChatButtonText="Start a new chat">
+      </bf-chat>
+      </body>
+      </html>
+```
+Login to your [Breezeflow](https://www.breezeflow.io) account to get your chatbot ID.
+
+## Configuration
+
+### Agent props
+
+| Prop                     | Type               | Description                                   |
+|--------------------------|--------------------|-----------------------------------------------|
+| orientation              | "left" \| "right" | Chat window position                          |
+| color                    | string            | Primary color for the chat interface          |
+| logoURL                  | string            | URL for the agent's avatar image              |
+| headline                 | string            | Chat window title                             |
+| description              | string            | Subtitle text below the headline             |
+| initialMessage           | string            | First message from the AI                    |
+| initialMessagePopupDelay | string            | Delay before showing initial message          |
+| placeholder              | string            | Input field placeholder text                  |
+| newChatButtonText        | string            | Text for the new chat button                  |
+
+
+### Style Props
+
+| Prop        | Type                     | Description                  |
+|-------------|--------------------------|------------------------------|
+| theme       | `"light"` \| `"dark"`    | UI theme                     |
+| colors      | `object`                 | Custom color configuration   |
+| container   | `object`                 | Container size and position  |
+| borderRadius| `object`                 | Border radius for UI elements|
+| button      | `object`                 | Chat button configuration    |
+
+Ensure to replace `your-agent-id` with your agent ID from your Breezeflow account. 
+Enjoy the seamless integration of Breezeflow chatbot to your website.

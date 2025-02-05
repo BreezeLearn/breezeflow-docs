@@ -42,7 +42,7 @@
   "navigation": [
     {
       "group": "Guide",
-      "pages": ["introduction", "email", "whatsapp"]
+      "pages": ["introduction", "email", "whatsapp", "agents"]
     }
   ]
 }
